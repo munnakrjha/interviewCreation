@@ -1,21 +1,77 @@
-# Scaler-Task Submission
-## Basic Requirements
-1. An interview creation page where the admin can create an interview by selecting
-participants, start time and end time. Backend should throw error with proper
-error message if:
-a. Any of the participants is not available during the scheduled time (i.e, has
-another interview scheduled)
-b. No of participants is less than 2
-2. An interviews list page where admin can see all the upcoming interviews.
-3. An interview edit page where admin can edit the created interview with the same
-validations as on the creation page.
+# Interview Creation Portal
+
+An advanced web application designed to manage interview scheduling effectively. The portal allows administrators to create, edit, and manage interviews with ease, ensuring a streamlined process for interview coordination.
+
+## Features
+- **Create Interviews**: Admins can create interviews by selecting participants, start and end times.
+- **View Upcoming Interviews**: A dedicated page lists all scheduled interviews with details.
+- **Edit Interviews**: Admins can edit existing interviews with validations to prevent scheduling conflicts.
+- **Validations**: Ensure that interview times and participant availability are consistent.
 
 ## Technologies Used
-* Django - 3.2.9 
-* Python - 3.8.5
-* Database - sqlite3(development), postgresql(heroku)
-* IDE - VS Code 
 
-## References
-* https://docs.djangoproject.com/en/3.2/
-* Google and other websites like w3school
+### Front-End
+- **React**: For building the user interface and handling dynamic user interactions.
+- **JavaScript**: Core language for client-side functionality.
+- **CSS**: For styling and responsive design.
+
+### Back-End
+- **Django**: Framework used to handle server-side operations and REST API creation.
+
+### Database
+- **SQLite3**: Lightweight database for managing interview data.
+
+## Installation and Setup
+
+### Prerequisites
+- Node.js and npm installed.
+- Python and pip installed.
+- SQLite3 installed.
+
+### Steps
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/your-repo/interview-creation-portal.git
+   cd interview-creation-portal
+   ```
+
+2. **Set Up Front-End**
+   ```bash
+   cd frontend
+   npm install
+   npm start
+   ```
+
+3. **Set Up Back-End**
+   ```bash
+   cd backend
+   python -m venv env
+   source env/bin/activate # On Windows: env\Scripts\activate
+   pip install -r requirements.txt
+   python manage.py migrate
+   python manage.py runserver
+   ```
+
+4. **Access the Application**
+   - Frontend: `http://localhost:3000`
+   - Backend API: `http://localhost:8000`
+
+## Project Structure
+```
+interview-creation-portal/
+├── frontend/        # React application
+├── backend/         # Django server
+├── db.sqlite3       # SQLite database
+├── README.md        # Project documentation
+```
+
+## Future Enhancements
+- Integrate notification systems (email/SMS) for participants.
+- Add authentication for user roles (admin and participants).
+- Enhance the UI with additional filters and sorting options.
+
+## Contributors
+- **Your Name**: Full-Stack Developer
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
