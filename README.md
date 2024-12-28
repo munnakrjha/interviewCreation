@@ -24,7 +24,6 @@ An advanced web application designed to manage interview scheduling effectively.
 ## Installation and Setup
 
 ### Prerequisites
-- Node.js and npm installed.
 - Python and pip installed.
 - SQLite3 installed.
 
